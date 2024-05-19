@@ -1,2 +1,5 @@
 /node_modules
 /Important+guidelines+-++Namaste+React.pdf
+/.parcel-cache
+/dist
+/docs

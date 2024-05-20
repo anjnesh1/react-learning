@@ -1,19 +1,28 @@
 import React from "react";
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom/client"
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", { id: "h1" }, "I am a h1 tag"),
-    React.createElement("h2", { id: "h2" }, "I am a h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", { id: "h1" }, "I am a h1 tag"),
-    React.createElement("h2", { id: "h2" }, "I am a h2 tag"),
-  ]),
-]);
+// React element is an object when we render this to DOM then it is HTML element.
 
-console.log(parent);
+// const heading= React.createElement("h1", {id:"heading"}, "Namaste React 🚀");
 
-// const heading = React.createElement("h1", {id:"heading"}, "Hello World from React!");
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// const jsxHeading = <h1 id="heading">Namaste React using JSX!🚀🚀🚀</h1>
+
+//const jsxHeadingReactElement = (<h1 id="heading">Namaste React using JSX!🚀🚀🚀</h1>);
+
+//<----------Writing heading code with react component---------->
+const TitleComponent =  ()=>(
+    <h1 className="title">
+        React functional component 🚀🚀🚀
+    </h1>
+);
+
+const HeaderComponent = ()=> (
+    <div className= "container">
+        <TitleComponent />
+        <h1 className="heading"> Namaste React 🚀🚀🚀</h1>
+    </div>
+);
+
+const root= ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeaderComponent/>);
